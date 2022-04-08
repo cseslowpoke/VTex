@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="781dae10-3875-42e8-bb3e-5e9490018ab4" name="Changes" comment="check">
-      <change afterPath="$PROJECT_DIR$/src/DraggableComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Screen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Atom/ArrayAtom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Atom/MatrixAtom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CollapsiblePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/F.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vtex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Vtex.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +17,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -33,6 +36,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="275xE2R4qiov9NaZYyYhUOOHEJs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
@@ -50,7 +56,12 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Unnamed">
     <configuration name="ScreenTest" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ScreenTest" />
       <module name="Vtex" />
@@ -58,6 +69,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Window" />
+      <module name="Vtex" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.ScreenTest" />
+      <item itemvalue="Application.Unnamed" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -72,7 +94,7 @@
       <workItem from="1648628318552" duration="330000" />
       <workItem from="1648628731312" duration="2076000" />
       <workItem from="1649319918055" duration="1365000" />
-      <workItem from="1649322781331" duration="6236000" />
+      <workItem from="1649322781331" duration="11422000" />
     </task>
     <task id="LOCAL-00001" summary="FF">
       <created>1648624025684</created>
@@ -95,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648628436843</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="check">
+      <created>1649386095347</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1649386095347</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
