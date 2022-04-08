@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="781dae10-3875-42e8-bb3e-5e9490018ab4" name="Changes" comment="FF">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+    <list default="true" id="781dae10-3875-42e8-bb3e-5e9490018ab4" name="Changes" comment="check">
+      <change afterPath="$PROJECT_DIR$/src/DraggableComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Screen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/F.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +50,15 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
+  <component name="RunManager">
+    <configuration name="ScreenTest" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ScreenTest" />
+      <module name="Vtex" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,7 +69,10 @@
       <updated>1648623635786</updated>
       <workItem from="1648623637373" duration="471000" />
       <workItem from="1648624666406" duration="879000" />
-      <workItem from="1648628318552" duration="87000" />
+      <workItem from="1648628318552" duration="330000" />
+      <workItem from="1648628731312" duration="2076000" />
+      <workItem from="1649319918055" duration="1365000" />
+      <workItem from="1649322781331" duration="6236000" />
     </task>
     <task id="LOCAL-00001" summary="FF">
       <created>1648624025684</created>
@@ -68,7 +81,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648624025684</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="check">
+      <created>1648628429126</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1648628429126</updated>
+    </task>
+    <task id="LOCAL-00003" summary="check">
+      <created>1648628436843</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1648628436843</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +126,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="FF" />
-    <option name="LAST_COMMIT_MESSAGE" value="FF" />
+    <MESSAGE value="check" />
+    <option name="LAST_COMMIT_MESSAGE" value="check" />
   </component>
 </project>
