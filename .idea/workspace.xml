@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="781dae10-3875-42e8-bb3e-5e9490018ab4" name="Changes" comment="check">
-      <change afterPath="$PROJECT_DIR$/src/Atom/ArrayAtom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Atom/MatrixAtom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CollapsiblePanel.java" afterDir="false" />
+    <list default="true" id="781dae10-3875-42e8-bb3e-5e9490018ab4" name="Changes" comment="basic class">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/scilab_forge_jlatexmath.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vtex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Vtex.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
@@ -48,11 +47,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -76,10 +80,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="jlatexmath-1.0.7.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/lib/jlatexmath-1.0.7.jar" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.ScreenTest" />
       <item itemvalue="Application.Unnamed" />
+      <item itemvalue="JAR Application.jlatexmath-1.0.7.jar" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.jlatexmath-1.0.7.jar" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -94,7 +108,8 @@
       <workItem from="1648628318552" duration="330000" />
       <workItem from="1648628731312" duration="2076000" />
       <workItem from="1649319918055" duration="1365000" />
-      <workItem from="1649322781331" duration="11422000" />
+      <workItem from="1649322781331" duration="14970000" />
+      <workItem from="1649405736262" duration="3035000" />
     </task>
     <task id="LOCAL-00001" summary="FF">
       <created>1648624025684</created>
@@ -124,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649386095347</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="basic class">
+      <created>1649391264707</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1649391264707</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +178,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="FF" />
     <MESSAGE value="check" />
-    <option name="LAST_COMMIT_MESSAGE" value="check" />
+    <MESSAGE value="basic class" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic class" />
   </component>
 </project>
