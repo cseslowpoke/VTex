@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.datatransfer.DataFlavor;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import org.scilab.forge.jlatexmath.*;
@@ -19,6 +20,9 @@ public class Window {
     JTextField latexOutputText;
     JMenuBar menuBar;
     JButton latexCopyButton;
+
+    DataFlavor dataFlavor = new DataFlavor(Atom.class,
+            Atom.class.getSimpleName());
     public Window() {
         frame = new JFrame("Window");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -38,10 +42,13 @@ public class Window {
         allPanel.setDividerLocation(150);
         allPanel.setOneTouchExpandable(true);
         frame.add(allPanel);
-
         initMenuBar();
         frame.setJMenuBar(menuBar);
         frame.setContentPane(allPanel);
+        initDragSource();
+    }
+    private void initDragSource() {
+
     }
     private void initShowPanel() {
         showPanel = new JPanel();
@@ -74,14 +81,6 @@ public class Window {
 
     public void test() {
         ArrayList<SymbolAtom> atoms = new ArrayList<SymbolAtom>(10);
-//        for(int i = 0; i < 10; i++) {
-//            if(i % 2 == 0) {
-//                atoms.add(new SymbolAtom("\\ "));
-//            }
-//            else {
-//                atoms.add(new SymbolAtom("SA"));
-//            }
-//        }
         for(int i=0;i<9;i++) {
             atoms.get(i).setSubscriptAtom(atoms.get(i + 1));
         }

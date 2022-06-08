@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="781dae10-3875-42e8-bb3e-5e9490018ab4" name="Changes" comment="basic class with test">
+      <change afterPath="$PROJECT_DIR$/src/LabelAtom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CollapsiblePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CollapsiblePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Window.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +56,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Window">
+  <component name="RunManager" selected="应用程序.Unnamed">
     <configuration name="ScreenTest" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ScreenTest" />
       <module name="Vtex" />
@@ -82,16 +83,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.ScreenTest" />
-      <item itemvalue="Application.Unnamed" />
-      <item itemvalue="Application.Window" />
-      <item itemvalue="JAR Application.jlatexmath-1.0.7.jar" />
+      <item itemvalue="JAR 应用程序.jlatexmath-1.0.7.jar" />
+      <item itemvalue="应用程序.ScreenTest" />
+      <item itemvalue="应用程序.Unnamed" />
+      <item itemvalue="应用程序.Window" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Window" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -175,7 +171,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="slowpoke" />
+                        <option value="guan" />
                       </list>
                     </value>
                   </entry>
@@ -195,7 +191,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="basic class with test" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Window_java$Window.ic" NAME="Window Coverage Results" MODIFIED="1654691766966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Window_java$ScreenTest.ic" NAME="ScreenTest Coverage Results" MODIFIED="1654691579597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Window_java$Window.ic" NAME="Window Coverage Results" MODIFIED="1654691766966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
