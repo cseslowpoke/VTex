@@ -1,5 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import org.scilab.forge.jlatexmath.*;
@@ -25,13 +29,7 @@ public class Window {
         frame.setSize(500, 500);
         initShowPanel();
         initCollapsiblePanel();
-        latexOutput = new JPanel(new BorderLayout());
-        latexOutputText = new JTextField("Latex output here:test test test test test test test test test test test test test test");
-        latexOutputText.setColumns(20);
-        latexCopyButton = new JButton("Copy");
-        latexOutputText.setEditable(false);
-        latexOutput.add(latexOutputText, BorderLayout.CENTER);
-        latexOutput.add(latexCopyButton, BorderLayout.EAST);
+        initLatexOutputPanel();
         rightPanel = new JSplitPane(JSplitPane.VERTICAL_SPLIT, showPanel, latexOutput);
         rightPanel.setDividerLocation(400);
         allPanel = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, collapsiblePanel, rightPanel);
@@ -43,6 +41,25 @@ public class Window {
         frame.setJMenuBar(menuBar);
         frame.setContentPane(allPanel);
     }
+
+    private void initLatexOutputPanel(){
+        latexOutput = new JPanel(new BorderLayout());
+        latexOutputText = new JTextField("Latex output here:test test test test test test test test test test test test test test");
+        latexOutputText.setColumns(20);
+        latexCopyButton = new JButton("Copy");
+        latexCopyButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                StringSelection stringSelection = new StringSelection(latexOutputText.getText());
+                Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+                clipboard.setContents(stringSelection, null);
+            }
+        });
+        latexOutputText.setEditable(false);
+        latexOutput.add(latexOutputText, BorderLayout.CENTER);
+        latexOutput.add(latexCopyButton, BorderLayout.EAST);
+    }
+
     private void initShowPanel() {
         showPanel = new JPanel();
         showPanel.setLayout(new BoxLayout(showPanel, BoxLayout.Y_AXIS));
