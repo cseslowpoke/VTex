@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.dnd.DragSource;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import org.scilab.forge.jlatexmath.*;
@@ -7,7 +8,7 @@ import org.scilab.forge.jlatexmath.Box;
 
 public class Window {
     JFrame frame;
-    ArrayList<DraggableComponent> DraggableComponents;
+    ArrayList<DraggableLabel> DraggableComponents;
     CollapsiblePanel collapsiblePanel;
     JPanel showPanel;
 //    JPanel drawPanel;
@@ -19,6 +20,7 @@ public class Window {
     JTextField latexOutputText;
     JMenuBar menuBar;
     JButton latexCopyButton;
+    DragSource dragSource;
     public Window() {
         frame = new JFrame("Window");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -50,7 +52,7 @@ public class Window {
     }
 
     private void initCollapsiblePanel() {
-        DraggableComponents = new ArrayList<DraggableComponent>();
+        DraggableComponents = new ArrayList<DraggableLabel>();
         collapsiblePanel = new CollapsiblePanel();
     }
 
@@ -62,6 +64,7 @@ public class Window {
         menuBar.add(save);
         //TODO: implement save function
     }
+
 
     public void run() {
         //frame.setResizable(false);

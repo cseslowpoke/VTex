@@ -35,7 +35,7 @@ public class Screen{
         menu.add(menuItem);
         menuBar.add(menu2);
         menuBar.add(menu);
-        panel2.add(new DraggableComponent());
+//        panel2.add(new DraggableComponent());
 
 
         frame.setJMenuBar(menuBar);
