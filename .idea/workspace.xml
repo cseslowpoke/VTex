@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="781dae10-3875-42e8-bb3e-5e9490018ab4" name="Changes" comment="basic class with test">
-      <change afterPath="$PROJECT_DIR$/src/DraggableLabel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/CollapsiblePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/CollapsiblePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/DraggableComponent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Screen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Window.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CollapsiblePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CollapsiblePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DraggableComponent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/Screen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DraggableLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DraggableLabel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,11 +43,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "WebServerToolWindowFactoryState": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
@@ -116,6 +109,7 @@
       <workItem from="1653111084218" duration="5082000" />
       <workItem from="1654691264531" duration="763000" />
       <workItem from="1654692050239" duration="2546000" />
+      <workItem from="1654702304615" duration="785000" />
     </task>
     <task id="LOCAL-00001" summary="FF">
       <created>1648624025684</created>
@@ -159,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649408803490</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="basic class with test">
+      <created>1654702503920</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1654702503920</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +177,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="slowpoke" />
+                        <option value="test" />
                       </list>
                     </value>
                   </entry>

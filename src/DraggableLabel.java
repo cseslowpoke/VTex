@@ -19,7 +19,7 @@ public class DraggableLabel extends JLabel {
     public DraggableLabel(String s) {
         setIcon(new ImageIcon("src/icon/unknown.png"));
         DragListener listener = new DragListener();
-        addMouseListsener(listener);
+        addMouseListener(listener);
         addMouseMotionListener(listener);
     }
     public class DragListener extends MouseInputAdapter
@@ -38,16 +38,17 @@ public class DraggableLabel extends JLabel {
         {
             Component component = me.getComponent();
             location = component.getLocation(location);
-            int x = location.x - pressed.getX() + me.getX();
-            int y = location.y - pressed.getY() + me.getY();
+
+
+            int x = me.getX();
+            int y = me.getY();
+
             mousePosition = new Point(x, y);
-//            System.out.println(location);
-//            System.out.println("x: " + x + " y: " + y);
         }
 
         public void mouseReleased(MouseEvent me)
         {
-            System.out.println("mouseReleased");
+//            System.out.println("mouseReleased");
             System.out.println("Release in " + mousePosition);
         }
     }
