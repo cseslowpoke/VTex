@@ -10,8 +10,6 @@ public class Window {
     ArrayList<DraggableComponent> DraggableComponents;
     CollapsiblePanel collapsiblePanel;
     JPanel showPanel;
-    JPanel atomPanel;
-    JPanel configPanel;
 //    JPanel drawPanel;
 //    JPanel textPanel;
     JSplitPane allPanel;
@@ -28,7 +26,8 @@ public class Window {
         initShowPanel();
         initCollapsiblePanel();
         latexOutput = new JPanel();
-        latexOutputText = new JTextField("Latex output here");
+        latexOutputText = new JTextField("Latex output here:test test test test test test test test test test test test test test");
+        latexOutputText.setColumns(20);
         latexCopyButton = new JButton("Copy");
         latexOutputText.setEditable(false);
         latexOutput.add(latexOutputText);
@@ -53,10 +52,6 @@ public class Window {
     private void initCollapsiblePanel() {
         DraggableComponents = new ArrayList<DraggableComponent>();
         collapsiblePanel = new CollapsiblePanel();
-        atomPanel = new JPanel();
-        collapsiblePanel.add(atomPanel);
-        configPanel = new JPanel();
-        collapsiblePanel.add(configPanel);
     }
 
     private void initMenuBar(){
