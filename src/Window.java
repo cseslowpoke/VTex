@@ -14,26 +14,40 @@ public class Window {
     JPanel configPanel;
 //    JPanel drawPanel;
 //    JPanel textPanel;
-    JPanel allPanel;
+    JSplitPane allPanel;
+    JSplitPane rightPanel;
     JButton copyButton;
-
+    JPanel latexOutput;
+    JTextField latexOutputText;
+    JMenuBar menuBar;
+    JButton latexCopyButton;
     public Window() {
         frame = new JFrame("Window");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 500);
-        allPanel = new JPanel(new GridLayout(1, 2));
         initShowPanel();
         initCollapsiblePanel();
-        allPanel.add(collapsiblePanel);
-        allPanel.add(showPanel);
+        latexOutput = new JPanel();
+        latexOutputText = new JTextField("Latex output here");
+        latexCopyButton = new JButton("Copy");
+        latexOutputText.setEditable(false);
+        latexOutput.add(latexOutputText);
+        latexOutput.add(latexCopyButton);
+        rightPanel = new JSplitPane(JSplitPane.VERTICAL_SPLIT, showPanel, latexOutput);
+        rightPanel.setDividerLocation(400);
+        allPanel = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, collapsiblePanel, rightPanel);
+        allPanel.setDividerLocation(150);
+        allPanel.setOneTouchExpandable(true);
         frame.add(allPanel);
+
+        initMenuBar();
+        frame.setJMenuBar(menuBar);
         frame.setContentPane(allPanel);
     }
     private void initShowPanel() {
         showPanel = new JPanel();
         showPanel.setLayout(new BoxLayout(showPanel, BoxLayout.Y_AXIS));
         showPanel.add(new JLabel("showPanel"));
-        showPanel.add(new JTextField("showPanel"));
     }
 
     private void initCollapsiblePanel() {
@@ -43,6 +57,15 @@ public class Window {
         collapsiblePanel.add(atomPanel);
         configPanel = new JPanel();
         collapsiblePanel.add(configPanel);
+    }
+
+    private void initMenuBar(){
+        menuBar = new JMenuBar();
+        JMenu save = new JMenu("save");
+        JMenuItem saveAsPNG = new JMenuItem("Save as PNG");
+        save.add(saveAsPNG);
+        menuBar.add(save);
+        //TODO: implement save function
     }
 
     public void run() {
