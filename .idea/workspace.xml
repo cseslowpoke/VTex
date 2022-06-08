@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="781dae10-3875-42e8-bb3e-5e9490018ab4" name="Changes" comment="basic class">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/scilab_forge_jlatexmath.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="781dae10-3875-42e8-bb3e-5e9490018ab4" name="Changes" comment="basic class with test">
+      <change afterPath="$PROJECT_DIR$/src/Atom/SpaceAtom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Atom/SqrtAtom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/window2.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/window2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vtex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Vtex.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Atom/ArrayAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/ArrayAtom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DraggableComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DraggableComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,26 +51,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="true" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;365&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propGUI&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Unnamed">
+  <component name="RunManager" selected="应用程序.main">
     <configuration name="ScreenTest" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ScreenTest" />
       <module name="Vtex" />
@@ -80,18 +78,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main" />
+      <module name="Vtex" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="jlatexmath-1.0.7.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/lib/jlatexmath-1.0.7.jar" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.ScreenTest" />
-      <item itemvalue="Application.Unnamed" />
-      <item itemvalue="JAR Application.jlatexmath-1.0.7.jar" />
+      <item itemvalue="JAR 应用程序.jlatexmath-1.0.7.jar" />
+      <item itemvalue="应用程序.ScreenTest" />
+      <item itemvalue="应用程序.Unnamed" />
+      <item itemvalue="应用程序.main" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.jlatexmath-1.0.7.jar" />
+        <item itemvalue="应用程序.main" />
       </list>
     </recent_temporary>
   </component>
@@ -109,7 +115,12 @@
       <workItem from="1648628731312" duration="2076000" />
       <workItem from="1649319918055" duration="1365000" />
       <workItem from="1649322781331" duration="14970000" />
-      <workItem from="1649405736262" duration="3035000" />
+      <workItem from="1649405736262" duration="9344000" />
+      <workItem from="1649729970564" duration="939000" />
+      <workItem from="1652418209514" duration="28000" />
+      <workItem from="1652418246896" duration="1787000" />
+      <workItem from="1652966115620" duration="4742000" />
+      <workItem from="1653111084218" duration="5082000" />
     </task>
     <task id="LOCAL-00001" summary="FF">
       <created>1648624025684</created>
@@ -146,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649391264707</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="basic class with test">
+      <created>1649408803490</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1649408803490</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +181,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="slowpoke" />
                       </list>
                     </value>
                   </entry>
@@ -179,6 +197,7 @@
     <MESSAGE value="FF" />
     <MESSAGE value="check" />
     <MESSAGE value="basic class" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic class" />
+    <MESSAGE value="basic class with test" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic class with test" />
   </component>
 </project>

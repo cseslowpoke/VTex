@@ -10,7 +10,6 @@ public class DraggableComponent extends JComponent {
     private Point pressed;
     private boolean dragging;
 
-
     public DraggableComponent() {
         this.location = new Point(0, 0);
         this.pressed = new Point(0, 0);
@@ -46,7 +45,8 @@ public class DraggableComponent extends JComponent {
     }
 
     private void paintDraggableComponent(Graphics g) {
-        // TODO Auto-generated method stub
+
+
 
     }
 }

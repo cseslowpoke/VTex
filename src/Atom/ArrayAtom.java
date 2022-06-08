@@ -8,6 +8,7 @@ public class ArrayAtom extends Atom {
     int leftStyle;
     @Override
     public String generate() {
+
         return null;
     }
 
