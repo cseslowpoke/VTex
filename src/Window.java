@@ -25,13 +25,13 @@ public class Window {
         frame.setSize(500, 500);
         initShowPanel();
         initCollapsiblePanel();
-        latexOutput = new JPanel();
+        latexOutput = new JPanel(new BorderLayout());
         latexOutputText = new JTextField("Latex output here:test test test test test test test test test test test test test test");
         latexOutputText.setColumns(20);
         latexCopyButton = new JButton("Copy");
         latexOutputText.setEditable(false);
-        latexOutput.add(latexOutputText);
-        latexOutput.add(latexCopyButton);
+        latexOutput.add(latexOutputText, BorderLayout.CENTER);
+        latexOutput.add(latexCopyButton, BorderLayout.EAST);
         rightPanel = new JSplitPane(JSplitPane.VERTICAL_SPLIT, showPanel, latexOutput);
         rightPanel.setDividerLocation(400);
         allPanel = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, collapsiblePanel, rightPanel);
@@ -64,7 +64,7 @@ public class Window {
     }
 
     public void run() {
-        frame.setResizable(false);
+        //frame.setResizable(false);
         frame.setVisible(true);
     }
     public static void main(String[] args) {
