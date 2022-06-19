@@ -1,22 +1,28 @@
 import javax.swing.*;
-import javax.swing.event.MouseInputAdapter;
 import java.awt.*;
-import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 public class CollapsiblePanel extends JSplitPane {
     JPanel itemToolPanel;
     JPanel itemConfigPanel;
+    ArrayList<String> iconDB=new ArrayList<String>();
     CollapsiblePanel(){
         super(JSplitPane.VERTICAL_SPLIT);
         itemToolPanel = new JPanel(new FlowLayout());
         itemConfigPanel = new JPanel(null);
         setLeftComponent(itemToolPanel);
         setRightComponent(itemConfigPanel);
-        DraggableLabel label = new DraggableLabel("test");
-        itemToolPanel.add(label);
+
+        for (int iconSrc=0;iconSrc<5;iconSrc++){
+            iconDB.add("iconSrc");
+            addToolbutton(String.valueOf(iconDB.get(iconSrc)));
+        }
 //        itemToolPanel.add(new JLabel("test"));
         setDividerLocation(250);
 
     }
-
+    void addToolbutton(String iconSrc){
+        ToolButton label = new ToolButton(iconSrc);
+        itemToolPanel.add(label);
+    }
 }

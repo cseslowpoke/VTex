@@ -8,7 +8,7 @@ import org.scilab.forge.jlatexmath.Box;
 
 public class Window {
     JFrame frame;
-    ArrayList<DraggableLabel> DraggableComponents;
+    ArrayList<ToolButton> DraggableComponents;
     CollapsiblePanel collapsiblePanel;
     JPanel showPanel;
 //    JPanel drawPanel;
@@ -52,7 +52,10 @@ public class Window {
     }
 
     private void initCollapsiblePanel() {
-        DraggableComponents = new ArrayList<DraggableLabel>();
+        //DraggableComponents = new ArrayList<DraggableLabel>();
+        //DraggableComponents.add(new DraggableLabel("button2"));
+        //DraggableComponents.add(new DraggableLabel("button3"));
+
         collapsiblePanel = new CollapsiblePanel();
     }
 

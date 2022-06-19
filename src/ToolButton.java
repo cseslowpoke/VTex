@@ -1,27 +1,37 @@
 
 
 import javax.swing.*;
-import javax.swing.event.MouseInputAdapter;
 import java.awt.*;
-import java.awt.dnd.DropTargetListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class DraggableLabel extends JLabel {
+public class ToolButton extends JButton {
     private static final long serialVersionUID = 1L;
     private Point location;
     private Point pressed;
     private boolean dragging;
+    private String iconSrc;
 
-    public DraggableLabel() {
-        this("");
+    public ToolButton(){
+        this("src/icon/unknown.png");
     }
-    public DraggableLabel(String s) {
-        setIcon(new ImageIcon("src/icon/unknown.png"));
-        DragListener listener = new DragListener();
-        addMouseListener(listener);
-        addMouseMotionListener(listener);
+
+    public ToolButton(String iconSrc) {
+        iconSrc="src/icon/unknown.png";
+        setIcon(new ImageIcon(iconSrc));
+
+        addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, "123");//改成在白板新增png
+            }
+        });
+
+        //DragListener listener = new DragListener();
+        //addMouseListener(listener);
+        //addMouseMotionListener(listener);
     }
+    /*
     public class DragListener extends MouseInputAdapter
     {
 
@@ -48,10 +58,11 @@ public class DraggableLabel extends JLabel {
 
         public void mouseReleased(MouseEvent me)
         {
-//            System.out.println("mouseReleased");
+            System.out.println("mouseReleased");
             System.out.println("Release in " + mousePosition);
         }
-    }
+
+    }*/
 }
 
 
