@@ -12,7 +12,7 @@ public class Window {
     ToolBarPanel toolBarPanel;
     //JPanel toolBarPanel;
     JPanel showPanel;
-    JPanel modifyPanel;
+    ModifyPanel modifyPanel;
 //    JPanel drawPanel;
 //    JPanel textPanel;
     JSplitPane allPanel;
@@ -59,11 +59,11 @@ public class Window {
     }
 
     private void setToolBarPanel() {
+
         toolBarPanel = new ToolBarPanel();
     }
     private void setModifyPanel(){
-        modifyPanel =new JPanel(new BorderLayout());
-        modifyPanel.add(new JTextField("Latex output here:test test test test test test test test test test test test test test"), BorderLayout.CENTER);
+        modifyPanel =new ModifyPanel();
     }
 
     private void setMenuBar(){
