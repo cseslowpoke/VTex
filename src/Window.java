@@ -4,6 +4,9 @@ import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import org.scilab.forge.jlatexmath.*;
@@ -14,15 +17,14 @@ public class Window {
     ArrayList<DraggableComponent> DraggableComponents;
     CollapsiblePanel collapsiblePanel;
     JPanel showPanel;
-//    JPanel drawPanel;
-//    JPanel textPanel;
     JSplitPane allPanel;
     JSplitPane rightPanel;
-    JButton copyButton;
     JPanel latexOutput;
     JTextField latexOutputText;
     JMenuBar menuBar;
     JButton latexCopyButton;
+    Latex latex;
+
     public Window() {
         frame = new JFrame("Window");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -47,12 +49,24 @@ public class Window {
         latexOutputText = new JTextField("Latex output here:test test test test test test test test test test test test test test");
         latexOutputText.setColumns(20);
         latexCopyButton = new JButton("Copy");
+        FracAtom frac = new FracAtom("x","xyzw");
+        latex.root = frac;
         latexCopyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 StringSelection stringSelection = new StringSelection(latexOutputText.getText());
                 Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
                 clipboard.setContents(stringSelection, null);
+                //tem
+
+
+                //FracAtom topF = new FracAtom("12","34");
+                //FracAtom botF = new FracAtom("56","78");
+
+                //frac.setNumerator(topF);
+                //frac.setDenominator(botF);
+
+                repaintShowpanel();
             }
         });
         latexOutputText.setEditable(false);
@@ -64,6 +78,14 @@ public class Window {
         showPanel = new JPanel();
         showPanel.setLayout(new BoxLayout(showPanel, BoxLayout.Y_AXIS));
         showPanel.add(new JLabel("showPanel"));
+        showPanel.setBackground(Color.white);
+        latex = new Latex();
+        showPanel.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                latex.mouseClick(e.getX(),e.getY());
+            }
+        });
     }
 
     private void initCollapsiblePanel() {
@@ -84,37 +106,15 @@ public class Window {
         //frame.setResizable(false);
         frame.setVisible(true);
     }
+
     public static void main(String[] args) {
         Window window = new Window();
         window.run();
     }
 
-    public void test() {
-        ArrayList<SymbolAtom> atoms = new ArrayList<SymbolAtom>(10);
-//        for(int i = 0; i < 10; i++) {
-//            if(i % 2 == 0) {
-//                atoms.add(new SymbolAtom("\\ "));
-//            }
-//            else {
-//                atoms.add(new SymbolAtom("SA"));
-//            }
-//        }
-        for(int i=0;i<9;i++) {
-            atoms.get(i).setSubscriptAtom(atoms.get(i + 1));
-        }
-        Box.DEBUG = !false;
-        TeXFormula formula = new TeXFormula(atoms.get(0).generate());
-        TeXIcon icon = formula.createTeXIcon(TeXConstants.STYLE_DISPLAY, 100);
-        BufferedImage image = new BufferedImage(icon.getIconWidth(),icon.getIconHeight(), BufferedImage.TYPE_INT_ARGB);
-        Graphics2D g2 = image.createGraphics();
-        g2.fillRect(0, 0, icon.getIconWidth(), icon.getIconHeight());
-        g2.setColor(Color.white);
-        g2.fillRect(0, 0, icon.getIconWidth(), icon.getIconHeight());
-        JLabel jl = new JLabel();
-        jl.setForeground(new Color(0, 0, 0));
-        System.out.println(icon.getIconHeight());
-        icon.paintIcon(jl, g2, 0, 0);
-        Graphics g = allPanel.getGraphics();
-        g.drawImage(image,0,0,null);
+    public void repaintShowpanel(){
+        latexOutputText.setText(latex.draw(showPanel.getGraphics()));
     }
+
+
 }
