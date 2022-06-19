@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class CollapsiblePanel extends JSplitPane {
     JPanel itemToolPanel;
     JPanel itemConfigPanel;
-    ArrayList<String> iconDB=new ArrayList<String>();
+    ArrayList<String> iconDB=new ArrayList<String>(); //latex要有甚麼數學符號仍需要討論
     CollapsiblePanel(){
         super(JSplitPane.VERTICAL_SPLIT);
         itemToolPanel = new JPanel(new FlowLayout());
@@ -13,8 +13,11 @@ public class CollapsiblePanel extends JSplitPane {
         setLeftComponent(itemToolPanel);
         setRightComponent(itemConfigPanel);
 
-        for (int iconSrc=0;iconSrc<5;iconSrc++){
-            iconDB.add("iconSrc");
+        for(int i=0;i<4;i++){
+            addArrayList("src/icon/unknown.png"); //正式版本要刪掉!!!
+        }
+
+        for (int iconSrc=0;iconSrc<iconDB.size();iconSrc++){  //把我們要的數學符號輸入到iconDB之內就能把button自動產生出來
             addToolbutton(String.valueOf(iconDB.get(iconSrc)));
         }
 //        itemToolPanel.add(new JLabel("test"));
@@ -24,5 +27,9 @@ public class CollapsiblePanel extends JSplitPane {
     void addToolbutton(String iconSrc){
         ToolButton label = new ToolButton(iconSrc);
         itemToolPanel.add(label);
+    }
+
+    void addArrayList(String iconSrc){
+        iconDB.add(iconSrc);
     }
 }
