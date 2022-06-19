@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="781dae10-3875-42e8-bb3e-5e9490018ab4" name="Changes" comment="把左下，前端處理好">
+    <list default="true" id="781dae10-3875-42e8-bb3e-5e9490018ab4" name="Changes" comment="basic class with test">
+      <change afterPath="$PROJECT_DIR$/src/Builder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SymbolOptionPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Type.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vtex/ModifyPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/ModifyPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Vtex/ToolButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/ToolButton.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Vtex/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Window.class" afterDir="false" />
@@ -21,6 +25,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -39,7 +44,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="275xE2R4qiov9NaZYyYhUOOHEJs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -116,6 +121,7 @@
       <workItem from="1654691264531" duration="763000" />
       <workItem from="1654692050239" duration="2546000" />
       <workItem from="1654702304615" duration="785000" />
+      <workItem from="1655652430545" duration="11032000" />
     </task>
     <task id="LOCAL-00001" summary="FF">
       <created>1648624025684</created>
@@ -194,21 +200,7 @@
       <option name="project" value="LOCAL" />
       <updated>1655633845160</updated>
     </task>
-    <task id="LOCAL-00012" summary="6/19 9:00">
-      <created>1655643620526</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1655643620526</updated>
-    </task>
-    <task id="LOCAL-00013" summary="把左下，前端處理好">
-      <created>1655648311928</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1655648311928</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +217,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/Sean" />
+                        <option value="Sean" />
                       </list>
                     </value>
                   </entry>
@@ -244,13 +236,10 @@
     <MESSAGE value="basic class with test" />
     <MESSAGE value="button finish !!&#10;button event test semi-finish QQ" />
     <MESSAGE value="4 panel constructor bacic finish!!" />
-    <MESSAGE value="6/19 9:00" />
-    <MESSAGE value="6/19 10:17" />
-    <MESSAGE value="把左下，前端處理好" />
-    <option name="LAST_COMMIT_MESSAGE" value="把左下，前端處理好" />
+    <option name="LAST_COMMIT_MESSAGE" value="4 panel constructor bacic finish!!" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Window_java$Window.ic" NAME="Window Coverage Results" MODIFIED="1654691766966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Window_java$ScreenTest.ic" NAME="ScreenTest Coverage Results" MODIFIED="1654691579597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Window_java$Window.ic" NAME="Window Coverage Results" MODIFIED="1654691766966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -12,7 +12,7 @@ public class Window {
     ToolBarPanel toolBarPanel;
     //JPanel toolBarPanel;
     JPanel showPanel;
-    ModifyPanel modifyPanel;
+    static ModifyPanel modifyPanel;
 //    JPanel drawPanel;
 //    JPanel textPanel;
     JSplitPane allPanel;
@@ -23,6 +23,8 @@ public class Window {
     JTextField latexText;
     JMenuBar menuBar;
     JButton latex_Src_Code_Copy_Button;
+
+    static Builder builder = new Builder();
     //DragSource dragSource;
     public Window() {
 
