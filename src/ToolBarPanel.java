@@ -7,7 +7,7 @@ public class ToolBarPanel extends JPanel {
     ToolBarPanel(){
 
         add(new JLabel("toolPanel"));
-        for(int i=0;i<4;i++){
+        for(int i=0;i<100;i++){
             addArrayList("src/icon/unknown.png"); //正式版本要刪掉!!!
         }
 

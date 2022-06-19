@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ToolButton extends JButton {
+public class ToolButton extends JLabel {
     private String iconSrc;
 
     public ToolButton(){
@@ -19,13 +19,6 @@ public class ToolButton extends JButton {
         Image scaleImage=originIcon.getImage().getScaledInstance(100,100,Image.SCALE_DEFAULT); //讓每個Icon看起來都長一樣
 
         setIcon(new ImageIcon(scaleImage));
-
-        addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, "改成在白板新增png"); //改成在白板新增png
-            }
-        });
     }
 }
 
