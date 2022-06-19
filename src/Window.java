@@ -41,7 +41,7 @@ public class Window {
         leftPanel = new JSplitPane(JSplitPane.VERTICAL_SPLIT, toolBarPanel, modifyPanel);
         leftPanel.setResizeWeight(0.8);
         allPanel = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftPanel, rightPanel);
-        allPanel.setResizeWeight(0.01);
+        allPanel.setResizeWeight(0.3);
 
         rightPanel.setOneTouchExpandable(true);
         leftPanel.setOneTouchExpandable(true);

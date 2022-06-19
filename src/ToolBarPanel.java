@@ -5,9 +5,8 @@ import java.util.ArrayList;
 public class ToolBarPanel extends JPanel {
     ArrayList<String> iconDB=new ArrayList<String>(); //latex要有甚麼數學符號仍需要討論
     ToolBarPanel(){
-
-        add(new JLabel("toolPanel"));
-        for(int i=0;i<10;i++){
+        setLayout(new GridLayout(4,10));
+        for(int i=0;i<40;i++){
             addArrayList("src/icon/unknown.png"); //正式版本要刪掉!!!
         }
 

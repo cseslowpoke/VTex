@@ -4,7 +4,7 @@ import java.awt.*;
 public class ModifyPanel extends JSplitPane {
     JPanel buttonBlock,textBlock;
     JTextField iconAsk,iconname,latexAsk,latexCode;
-    JButton newBtn=new JButton("新增") ,delBtn=new JButton("刪除");
+    JButton newBtn=new JButton("修改屬性") ,delBtn=new JButton("刪除白板中被選擇的字體");
     ModifyPanel(){
         super(JSplitPane.VERTICAL_SPLIT);
 
@@ -16,14 +16,14 @@ public class ModifyPanel extends JSplitPane {
         buttonBlock.add(newBtn);
         buttonBlock.add(delBtn);
 
-        textBlock = new JPanel(new GridLayout(2,3));
+        textBlock = new JPanel(new GridLayout(2,2));
 
-        iconAsk=new JTextField("目前ID");
+        iconAsk=new JTextField("字體");
         iconAsk.setEditable(false);
-        iconname=new JTextField();
-        latexAsk=new JTextField("latex代表字串");
+        iconname=new JTextField("請輸入字體名稱");
+        latexAsk=new JTextField("顏色");
         latexAsk.setEditable(false);
-        latexCode=new JTextField();
+        latexCode=new JTextField("請輸入(r,g,b)");
 
         iconAsk.setFont(new Font("標楷體", Font.BOLD, 18));
         iconname.setFont(new Font("標楷體", Font.BOLD, 18));
