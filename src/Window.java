@@ -7,59 +7,66 @@ import org.scilab.forge.jlatexmath.*;
 import org.scilab.forge.jlatexmath.Box;
 
 public class Window {
-    JFrame frame;
-    ArrayList<ToolButton> DraggableComponents;
-    CollapsiblePanel collapsiblePanel;
+    JFrame appFullScreenFrame;
+    //ArrayList<ToolButton> DraggableComponents;
+    ToolBarPanel toolBarPanel;
+    //JPanel toolBarPanel;
     JPanel showPanel;
+    JPanel modifyPanel;
 //    JPanel drawPanel;
 //    JPanel textPanel;
     JSplitPane allPanel;
     JSplitPane rightPanel;
+    JSplitPane leftPanel;
     JButton copyButton;
-    JPanel latexOutput;
-    JTextField latexOutputText;
+    JPanel outputPanel;
+    JTextField latexText;
     JMenuBar menuBar;
-    JButton latexCopyButton;
-    DragSource dragSource;
+    JButton latex_Src_Code_Copy_Button;
+    //DragSource dragSource;
     public Window() {
-        frame = new JFrame("Window");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500, 500);
-        initShowPanel();
-        initCollapsiblePanel();
-        latexOutput = new JPanel(new BorderLayout());
-        latexOutputText = new JTextField("Latex output here:test test test test test test test test test test test test test test");
-        latexOutputText.setColumns(20);
-        latexCopyButton = new JButton("Copy");
-        latexOutputText.setEditable(false);
-        latexOutput.add(latexOutputText, BorderLayout.CENTER);
-        latexOutput.add(latexCopyButton, BorderLayout.EAST);
-        rightPanel = new JSplitPane(JSplitPane.VERTICAL_SPLIT, showPanel, latexOutput);
-        rightPanel.setDividerLocation(400);
-        allPanel = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, collapsiblePanel, rightPanel);
-        allPanel.setDividerLocation(150);
-        allPanel.setOneTouchExpandable(true);
-        frame.add(allPanel);
 
-        initMenuBar();
-        frame.setJMenuBar(menuBar);
-        frame.setContentPane(allPanel);
+        appFullScreenFrame = new JFrame("Latex小工具");
+        appFullScreenFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        appFullScreenFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
+        setShowPanel(); //白板修改(右上)
+        setToolBarPanel(); //工具列修改 (左上)
+        setOutputPanel();//輸出修改(右下)
+        setMenuBar();//最上面的選單(頂端)
+        setModifyPanel();
+
+        rightPanel = new JSplitPane(JSplitPane.VERTICAL_SPLIT, showPanel, outputPanel);
+        rightPanel.setResizeWeight(0.8);
+        leftPanel = new JSplitPane(JSplitPane.VERTICAL_SPLIT, toolBarPanel, modifyPanel);
+        leftPanel.setResizeWeight(0.8);
+        allPanel = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftPanel, rightPanel);
+        allPanel.setResizeWeight(0.01);
+
+        rightPanel.setOneTouchExpandable(true);
+        leftPanel.setOneTouchExpandable(true);
+        allPanel.setOneTouchExpandable(true);
+
+        appFullScreenFrame.add(allPanel);
+        appFullScreenFrame.setJMenuBar(menuBar);
+        appFullScreenFrame.setContentPane(allPanel);
+
     }
-    private void initShowPanel() {
+    private void setShowPanel() {
         showPanel = new JPanel();
         showPanel.setLayout(new BoxLayout(showPanel, BoxLayout.Y_AXIS));
         showPanel.add(new JLabel("showPanel"));
     }
 
-    private void initCollapsiblePanel() {
-        //DraggableComponents = new ArrayList<DraggableLabel>();
-        //DraggableComponents.add(new DraggableLabel("button2"));
-        //DraggableComponents.add(new DraggableLabel("button3"));
-
-        collapsiblePanel = new CollapsiblePanel();
+    private void setToolBarPanel() {
+        toolBarPanel = new ToolBarPanel();
+    }
+    private void setModifyPanel(){
+        modifyPanel =new JPanel(new BorderLayout());
+        modifyPanel.add(new JTextField("Latex output here:test test test test test test test test test test test test test test"), BorderLayout.CENTER);
     }
 
-    private void initMenuBar(){
+    private void setMenuBar(){
         menuBar = new JMenuBar();
         JMenu save = new JMenu("save");
         JMenuItem saveAsPNG = new JMenuItem("Save as PNG");
@@ -68,14 +75,22 @@ public class Window {
         //TODO: implement save function
     }
 
-
     public void run() {
         //frame.setResizable(false);
-        frame.setVisible(true);
+        appFullScreenFrame.setVisible(true);
     }
     public static void main(String[] args) {
         Window window = new Window();
         window.run();
+    }
+    private  void setOutputPanel(){
+        outputPanel = new JPanel(new BorderLayout());
+        latexText = new JTextField("Latex output here:test test test test test test test test test test test test test test");
+        latexText.setColumns(20);
+        latex_Src_Code_Copy_Button = new JButton("get Source latex code");
+        latexText.setEditable(false);
+        outputPanel.add(latexText, BorderLayout.CENTER);
+        outputPanel.add(latex_Src_Code_Copy_Button, BorderLayout.EAST);
     }
 
     public void test() {

@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="781dae10-3875-42e8-bb3e-5e9490018ab4" name="Changes" comment="button finish !!&#10;button event test semi-finish QQ">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/CollapsiblePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/CollapsiblePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CollapsiblePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CollapsiblePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vtex/CollapsiblePanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vtex/ToolButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/ToolButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Window.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CollapsiblePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToolBarPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ToolButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToolButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +172,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655603312466</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="button finish !!&#10;button event test semi-finish QQ">
+      <created>1655605775731</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1655605775731</updated>
+    </task>
+    <task id="LOCAL-00010" summary="button finish !!&#10;button event test semi-finish QQ">
+      <created>1655605793239</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1655605793239</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +203,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Sean" />
+                        <option value="origin/Sean" />
                       </list>
                     </value>
                   </entry>
