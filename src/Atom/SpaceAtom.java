@@ -27,10 +27,21 @@ public class SpaceAtom extends Atom {
     @Override
     public void setSubscript(Atom a) {
     }
+
+
     Atom parent;
     public void setParent(Atom a){
         parent = a;
     }
+
+    @Override
+    public boolean isTerminal() {
+        return true;
+    }
+
+    @Override
+    public void replace(Atom a, Atom b) {}
+
     @Override
     public Atom getParent() {
         return parent;

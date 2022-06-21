@@ -38,6 +38,17 @@ public class ArrayAtom extends Atom {
     public void setParent(Atom a){
         parent = a;
     }
+
+    @Override
+    public boolean isTerminal() {
+        return false;
+    }
+
+    @Override
+    public void replace(Atom a, Atom b) {
+
+    }
+
     @Override
     public Atom getParent() {
         return parent;

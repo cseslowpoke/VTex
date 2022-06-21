@@ -52,10 +52,33 @@ public class FracAtom extends Atom {
     public void setSubscript(Atom a) {
 
     }
+
     Atom parent;
     public void setParent(Atom a){
         parent = a;
     }
+
+    @Override
+    public boolean isTerminal() {
+        return false;
+    }
+
+    @Override
+    public void replace(Atom a, Atom b) {
+        if(numerator.equals(a)){
+            b.setParent(this);
+            b.setSuperscript(numerator.getSuperscript());
+            b.setSubscript(numerator.getSubscript());
+            numerator = b;
+        }
+        else if(denominator.equals(a)){
+            b.setParent(this);
+            b.setSuperscript(denominator.getSuperscript());
+            b.setSubscript(denominator.getSubscript());
+            denominator=b;
+        }
+    }
+
     @Override
     public Atom getParent() {
         return parent;

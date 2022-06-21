@@ -33,15 +33,6 @@ public class SymbolAtom extends Atom {
         return italicFace;
     }
 
-    public Atom getSuperscriptAtom() {
-        return superscriptAtom;
-    }
-
-    public Atom getSubscriptAtom() {
-        return subscriptAtom;
-    }
-
-
     @Override
     public String generate() {
         String ret = "{";
@@ -69,6 +60,12 @@ public class SymbolAtom extends Atom {
     @Override
     public void dfs(ArrayList<Atom> l){
         l.add(this);
+        if(superscriptAtom!=null){
+            superscriptAtom.dfs(l);
+        }
+        if(subscriptAtom!=null){
+            subscriptAtom.dfs((l));
+        }
     }
 
     @Override
@@ -83,14 +80,28 @@ public class SymbolAtom extends Atom {
 
     @Override
     public void setSuperscript(Atom a) {
-        superscriptAtom = a;
-        superscriptAtom.setParent(this);
+        if(a!=null) {
+            superscriptAtom = a;
+            superscriptAtom.setParent(this);
+        }
     }
 
     @Override
     public void setSubscript(Atom a) {
-        subscriptAtom = a;
-        subscriptAtom.setParent(this);
+        if(a!=null) {
+            subscriptAtom = a;
+            subscriptAtom.setParent(this);
+        }
+    }
+
+    @Override
+    public Atom getSuperscript() {
+        return  superscriptAtom;
+    }
+
+    @Override
+    public Atom getSubscript() {
+        return subscriptAtom;
     }
 
     @Override
@@ -101,4 +112,12 @@ public class SymbolAtom extends Atom {
     public void setParent(Atom a){
         parent = a;
     }
+
+    @Override
+    public boolean isTerminal() {
+        return true;
+    }
+
+    @Override
+    public void replace(Atom a, Atom b) {}
 }
