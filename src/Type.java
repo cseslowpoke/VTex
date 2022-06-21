@@ -1,3 +1,3 @@
 public enum Type {
-    SYMBOL,FRAC,ARRAY;
+    SYMBOL,FRAC,ARRAY,SQRT;
 }

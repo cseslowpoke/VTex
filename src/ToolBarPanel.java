@@ -16,6 +16,7 @@ public class ToolBarPanel extends JPanel {
     JPanel lowerCasePanel;
     JPanel upperGreekPanel;
     JPanel lowerGreekPanel;
+    JPanel functionPanel;
 
     ToolBarPanel(){
         super();
@@ -25,12 +26,13 @@ public class ToolBarPanel extends JPanel {
         lowerCasePanel = new JPanel();
         upperGreekPanel = new JPanel();
         lowerGreekPanel = new JPanel();
+        functionPanel = new JPanel();
         add(numberPanel);
         add(upperCasePanel);
         add(lowerCasePanel);
         add(upperGreekPanel);
         add(lowerGreekPanel);
-
+        add(functionPanel);
         String[] number = {"1","2","3","4","5","6","7","8","9","0"};
         String[] upperCase = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
         String[] lowerCase = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
@@ -118,14 +120,39 @@ public class ToolBarPanel extends JPanel {
             iconCount++;
         }
 
+        final ToolButton sqrtButton = new ToolButton(Type.SQRT,"\\sqrt{x}");
+        final int a = iconCount;
+        sqrtButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                buttonDB.get(Selected).unSelected();
+                Window.builder.setAtom(sqrtButton.createAtom());
+                sqrtButton.selected();
+                Selected = a;
+            }
+        });
+        buttonDB.add(sqrtButton);
+        functionPanel.add(sqrtButton);
+        iconCount++;
 
+        final ToolButton fracButton = new ToolButton(Type.FRAC,"\\frac{x}{y}");
+        final int b = iconCount;
+        fracButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                buttonDB.get(Selected).unSelected();
+                Window.builder.setAtom(fracButton.createAtom());
+                fracButton.selected();
+                Selected = b;
+            }
+        });
+        buttonDB.add(fracButton);
+        functionPanel.add(fracButton);
+        iconCount++;
         setBackground(Color.white);
 
     }
 
-    void addArrayList(String iconSrc) {
-        iconDB.add(iconSrc);
-    }
 
     public void clearSelected() {
         buttonDB.get(Selected).unSelected();

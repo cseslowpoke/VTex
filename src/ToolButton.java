@@ -12,18 +12,23 @@ public class ToolButton extends JLabel {
     String value;
 
 
+
     public ToolButton(Type TYPE, String value) {
-
-//        super(new ImageIcon());
-
         this.TYPE = TYPE;
         this.value = value;
-        setPreferredSize(new Dimension(50  ,50));
-
+        if(TYPE == Type.SYMBOL) setPreferredSize(new Dimension(50 ,50));
+        if(TYPE == Type.FRAC) setPreferredSize(new Dimension(100 ,100));
+        if(TYPE == Type.SQRT) setPreferredSize(new Dimension(100 ,100));
     }
     public Atom createAtom() {
         if(TYPE == Type.SYMBOL) {
             return new SymbolAtom(value);
+        }
+        if(TYPE == Type.FRAC) {
+            return new FracAtom();
+        }
+        if(TYPE == Type.SQRT) {
+            return new SqrtAtom();
         }
         return null;
     }
@@ -42,7 +47,6 @@ public class ToolButton extends JLabel {
         //System.out.println(icon.getIconHeight());
         icon.paintIcon(jl, g2, 0, 0);
         g.drawImage(image,0,0,null);
-
     }
 
     public void selected() {

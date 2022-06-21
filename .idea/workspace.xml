@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="781dae10-3875-42e8-bb3e-5e9490018ab4" name="Changes" comment="can run with bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Atom/SymbolAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/SymbolAtom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Latex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Latex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ToolBarPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToolBarPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToolButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToolButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Type.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +130,7 @@
       <workItem from="1655812769993" duration="1500000" />
       <workItem from="1655815095779" duration="1770000" />
       <workItem from="1655817693346" duration="692000" />
-      <workItem from="1655820926380" duration="4475000" />
+      <workItem from="1655820926380" duration="4900000" />
     </task>
     <task id="LOCAL-00001" summary="FF">
       <created>1648624025684</created>
