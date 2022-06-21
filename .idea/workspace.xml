@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="781dae10-3875-42e8-bb3e-5e9490018ab4" name="Changes" comment="can run with bug">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Vtex/Latex$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Latex$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Vtex/Latex$AtomPos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Latex$AtomPos.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Vtex/Latex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Latex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/SqrtAtom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/SqrtAtom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Atom/SqrtAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/SqrtAtom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Latex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Latex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SymbolOptionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SymbolOptionPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToolBarPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToolBarPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +205,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="guan" />
+                        <option value="test2" />
                       </list>
                     </value>
                   </entry>
@@ -226,8 +225,19 @@
     <MESSAGE value="can run with bug" />
     <option name="LAST_COMMIT_MESSAGE" value="can run with bug" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ToolButton.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Window_java$Window.ic" NAME="Window Coverage Results" MODIFIED="1654691766966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Window_java$ScreenTest.ic" NAME="ScreenTest Coverage Results" MODIFIED="1654691579597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Window_java$Window.ic" NAME="Window Coverage Results" MODIFIED="1654691766966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

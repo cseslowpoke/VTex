@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 public class ToolBarPanel extends JPanel {
     int Selected;
-        ArrayList<String> iconDB=new ArrayList<String>(); //latex要有甚麼數學符號仍需要討論
-        ArrayList<ToolButton> buttonDB = new ArrayList<ToolButton>();
+    ArrayList<String> iconDB=new ArrayList<String>(); //latex要有甚麼數學符號仍需要討論
+    ArrayList<ToolButton> buttonDB = new ArrayList<ToolButton>();
 
     ToolBarPanel(){
         super();
@@ -43,7 +43,7 @@ public class ToolBarPanel extends JPanel {
         iconDB.add(iconSrc);
     }
 
-    void clearSelected() {
-
+    public void clearSelected() {
+        buttonDB.get(Selected).unSelected();
     }
 }

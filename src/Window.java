@@ -124,14 +124,17 @@ public class Window {
         showPanel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-//                latex.mouseClick(e.getX(),e.getY());
                 if(builder.nowAtom != null){
-                    boolean a =latex.addAtom(builder.nowAtom,e.getX(),e.getY());
+                    boolean a = latex.addAtom(builder.nowAtom,e.getX(),e.getY());
                     if(!a) {
                         return;
                     }
+                    toolBarPanel.clearSelected();
+                    builder.nowAtom = null;
+                    repaintShowpanel();
                 }
-                repaintShowpanel();
+
+
             }
         });
     }

@@ -38,7 +38,5 @@ public class SymbolOptionPanel extends OptionPanel{
         });
         buttonPanel.add(confirmButton);
         add(buttonPanel);
-
-
     }
 }
