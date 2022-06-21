@@ -8,6 +8,9 @@ public class SqrtAtom extends Atom {
 
     public SqrtAtom(String s){
         inside = new SymbolAtom(s);
+        inside.setParent(this);
+        nth = new SpaceAtom();
+        nth.setParent(this);
     }
 
     public void setNth(Atom a){
@@ -39,11 +42,11 @@ public class SqrtAtom extends Atom {
     }
     @Override
     public void dfs(ArrayList<Atom> l){
-        l.add(this);
         if(nth!=null) {
             nth.dfs(l);
         }
-        inside.dfs((l));
+        l.add(this);
+        inside.dfs(l);
     }
 
     @Override
@@ -88,19 +91,19 @@ public class SqrtAtom extends Atom {
 
     @Override
     public void replace(Atom a, Atom b) {
-        if(nth.equals(a)){
+        if(a.equals(nth)){
             b.setParent(this);
             b.setSuperscript(nth.getSuperscript());
             b.setSubscript(nth.getSubscript());
             nth=b;
         }
-        else if(inside.equals(a)){
+        else if(a.equals(inside)){
             b.setParent(this);
             b.setSuperscript(inside.getSuperscript());
             b.setSubscript(inside.getSubscript());
             inside=b;
         }
-        else if(superscript.equals(a)){
+        else if(a.equals(superscript)){
             b.setParent(this);
             b.setSuperscript(superscript.getSuperscript());
             b.setSubscript(superscript.getSubscript());
