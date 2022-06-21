@@ -3,10 +3,13 @@ import org.scilab.forge.jlatexmath.TeXConstants;
 import org.scilab.forge.jlatexmath.TeXFormula;
 import org.scilab.forge.jlatexmath.TeXIcon;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -27,17 +30,21 @@ public class Latex {
         ArrayList<Atom> l = new ArrayList<>();
         if(root !=null) {
             root.dfs(l);
+            System.out.print("\n\n\n\n");
         }
         return l;
     }
     Graphics gr;
+    BufferedImage image;
+    final int topx = 200;
+    final int topy = 200;
     public String draw(Graphics g){
         gr=g;
         Box.Inset = new LinkedList<>();
         String latexFormula = generateFormula();
         TeXFormula formula = new TeXFormula(latexFormula);
         TeXIcon icon = formula.createTeXIcon(TeXConstants.STYLE_DISPLAY, fontSize);
-        BufferedImage image = new BufferedImage(icon.getIconWidth(),icon.getIconHeight(), BufferedImage.TYPE_INT_ARGB);
+        image = new BufferedImage(icon.getIconWidth(),icon.getIconHeight(), BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2 = image.createGraphics();
         g2.fillRect(0, 0, icon.getIconWidth(), icon.getIconHeight());
         g2.setColor(Color.white);
@@ -45,15 +52,15 @@ public class Latex {
         JLabel jl = new JLabel();
         jl.setForeground(new Color(0, 0, 0));
         icon.paintIcon(jl, g2, 0, 0);
-        g.drawImage(image,0,0,null);
+        g.drawImage(image,topx,topy,null);
         dfsList = getDfsList();
-        for(Rectangle2D.Float i:Box.Inset){
+        /*for(Rectangle2D.Float i:Box.Inset){
             if(i.height==0){
                 i.y-= 0.5f;
                 i.height = 0.5f;
             }
             g.drawRect((int)(i.x*fontSize),(int)(i.y*fontSize),(int)(i.width*fontSize),(int)(i.height*fontSize));
-        }
+        }*/
         return latexFormula;
     }
 
@@ -79,15 +86,16 @@ public class Latex {
                 rect.height=0.5f;
             }
 
-            int centerx = (int)(rect.x*fontSize + rect.width*fontSize/2);
-            int centery = (int)(rect.y*fontSize + rect.height*fontSize/2);
-            int toprightx = (int)(rect.x*fontSize+rect.width*fontSize);
-            int toprighty = (int)(rect.y*fontSize) - (int)(rect.height*fontSize*0.4f);
-            int bottomrightx = (int)(rect.x*fontSize+rect.width*fontSize) - (int)(rect.width*fontSize*0.2);
-            int bottomrighty = (int)(rect.y*fontSize+rect.height*fontSize) + (int)(rect.height*fontSize*0.3);
-            int rightx = (int)(rect.x*fontSize+rect.width*fontSize) + (int)(rect.width*fontSize*0.15);
-            int righty = (int)(rect.y*fontSize + rect.height*fontSize/2);
-            int range = (int)(rect.height*fontSize*rect.height*fontSize*0.25);
+            int centerx = topx+(int)(rect.x*fontSize + rect.width*fontSize/2);
+            int centery = topy+(int)(rect.y*fontSize + rect.height*fontSize/2);
+            int toprightx = topx+(int)(rect.x*fontSize+rect.width*fontSize);
+            int toprighty = topy+(int)(rect.y*fontSize) - (int)(rect.height*fontSize*0.4f);
+            int bottomrightx = topx+(int)(rect.x*fontSize+rect.width*fontSize) - (int)(rect.width*fontSize*0.2);
+            int bottomrighty = topy+(int)(rect.y*fontSize+rect.height*fontSize) + (int)(rect.height*fontSize*0.3);
+            int rightx = topx+(int)(rect.x*fontSize+rect.width*fontSize) + (int)(rect.width*fontSize*0.15);
+            int righty = topy+(int)(rect.y*fontSize + rect.height*fontSize/2);
+
+            int range = Math.min((int)(rect.height*fontSize*rect.height*fontSize*0.25),800);
             //System.out.printf("topright dist: %d\n",distSquare(x,y,toprightx,toprighty));
             //System.out.printf("bottomright dist :%d\n",distSquare(x,y,bottomrightx,bottomrighty));
             //System.out.printf("center dist :%d\n",distSquare(x,y,centerx,centery));
@@ -175,4 +183,16 @@ public class Latex {
         }
     }
 
+    public void download() {
+        if(image == null) {
+            return;
+        }
+        try {
+            File outputFile = new File("saved.png");
+            ImageIO.write(image, "png", outputFile);
+        }
+        catch (IOException e) {
+            System.out.println("Error writing file");
+        }
+    }
 }

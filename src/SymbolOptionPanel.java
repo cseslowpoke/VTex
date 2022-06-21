@@ -11,8 +11,6 @@ public class SymbolOptionPanel extends OptionPanel{
 
     JPanel buttonPanel;
 
-    JButton confirmButton;
-
 
     SymbolOptionPanel(SymbolAtom Atom) {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
@@ -28,15 +26,20 @@ public class SymbolOptionPanel extends OptionPanel{
 
         buttonPanel = new JPanel();
         buttonPanel.setLayout(new BoxLayout(buttonPanel,BoxLayout.X_AXIS));
-        confirmButton = new JButton("確認");
-        confirmButton.addActionListener(new ActionListener() {
+        boldButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Atom.setBoldFace(boldButton.isSelected());
                 Atom.setItalicFace(ItalicButton.isSelected());
             }
         });
-        buttonPanel.add(confirmButton);
+        ItalicButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Atom.setBoldFace(boldButton.isSelected());
+                Atom.setItalicFace(ItalicButton.isSelected());
+            }
+        });
         add(buttonPanel);
     }
 }

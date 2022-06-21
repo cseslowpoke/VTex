@@ -7,12 +7,21 @@ public class SymbolAtom extends Atom {
     private Atom superscriptAtom;
     private Atom subscriptAtom;
     private Atom parent;
+
+    String[] dfsOrderIsDown = {"\\sum ","\\lim "};
     public SymbolAtom(String symbol) {
         this.symbol = symbol;
         this.boldFace = false;
         this.italicFace = false;
+        for(int i=0;i<dfsOrderIsDown.length;i++){
+            if(symbol.equals(dfsOrderIsDown[i])){
+                dfsorder = dfsOrder.DOWN;
+            }
+        }
     }
 
+    public enum dfsOrder{TOP, DOWN};
+    dfsOrder dfsorder = dfsOrder.TOP;
     public void setBoldFace(boolean boldFace) {
         this.boldFace = boldFace;
     }
@@ -59,13 +68,35 @@ public class SymbolAtom extends Atom {
     }
     @Override
     public void dfs(ArrayList<Atom> l){
-        l.add(this);
-        if(superscriptAtom!=null){
-            superscriptAtom.dfs(l);
+
+        switch(dfsorder){
+            case TOP:{
+                l.add(this);
+                System.out.println(symbol);
+                if(superscriptAtom!=null){
+                    superscriptAtom.dfs(l);
+                }
+                if(subscriptAtom!=null){
+                    subscriptAtom.dfs((l));
+                }
+                break;
+            }
+            case DOWN:{
+                if(superscriptAtom!=null){
+                    superscriptAtom.dfs(l);
+                }
+                System.out.println(symbol);
+                if(symbol=="\\lim "){
+                    l.add(this);l.add(this);
+                }
+                l.add(this);
+                if(subscriptAtom!=null){
+                    subscriptAtom.dfs((l));
+                }
+                break;
+            }
         }
-        if(subscriptAtom!=null){
-            subscriptAtom.dfs((l));
-        }
+
     }
 
     @Override
@@ -125,13 +156,13 @@ public class SymbolAtom extends Atom {
 
     @Override
     public void replace(Atom a, Atom b) {
-        if(superscriptAtom.equals(a)){
+        if(superscriptAtom!=null && superscriptAtom.equals(a)){
             b.setSuperscript(superscriptAtom.getSuperscript());
             b.setSubscript(superscriptAtom.getSubscript());
             superscriptAtom = b;
             superscriptAtom.setParent(this);
         }
-        else if(subscriptAtom.equals(a)){
+        else if(subscriptAtom!=null && subscriptAtom.equals(a)){
             b.setSuperscript(subscriptAtom.getSuperscript());
             b.setSubscript(subscriptAtom.getSubscript());
             subscriptAtom = b;

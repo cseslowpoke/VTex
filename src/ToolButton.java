@@ -16,7 +16,7 @@ public class ToolButton extends JLabel {
     public ToolButton(Type TYPE, String value) {
         this.TYPE = TYPE;
         this.value = value;
-        if(TYPE == Type.SYMBOL) setPreferredSize(new Dimension(50 ,50));
+        if(TYPE == Type.SYMBOL) setPreferredSize(new Dimension(60 ,60));
         if(TYPE == Type.FRAC) setPreferredSize(new Dimension(100 ,100));
         if(TYPE == Type.SQRT) setPreferredSize(new Dimension(100 ,100));
     }
@@ -47,6 +47,7 @@ public class ToolButton extends JLabel {
         //System.out.println(icon.getIconHeight());
         icon.paintIcon(jl, g2, 0, 0);
         g.drawImage(image,0,0,null);
+        setPreferredSize(new Dimension(icon.getIconWidth() ,icon.getIconHeight()));
     }
 
     public void selected() {

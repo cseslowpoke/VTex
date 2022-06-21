@@ -12,6 +12,7 @@ import org.scilab.forge.jlatexmath.Box;
 public class Window {
     JFrame frame;
     ToolBarPanel toolBarPanel;
+    JScrollPane toolBarPanelScrollPane;
     JPanel showPanel;
     JSplitPane allPanel;
     JSplitPane leftPanel;
@@ -40,10 +41,11 @@ public class Window {
 
         rightPanel = new JSplitPane(JSplitPane.VERTICAL_SPLIT, showPanel, latexOutput);
         rightPanel.setResizeWeight(0.8);
-        leftPanel = new JSplitPane(JSplitPane.VERTICAL_SPLIT, toolBarPanel, modifyPanel);
+        leftPanel = new JSplitPane(JSplitPane.VERTICAL_SPLIT, toolBarPanelScrollPane, modifyPanel);
         leftPanel.setResizeWeight(0.8);
         allPanel = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftPanel, rightPanel);
-        allPanel.setResizeWeight(0);
+        allPanel.setResizeWeight(0.3);
+        leftPanel.setBackground(Color.white);
 
         rightPanel.setOneTouchExpandable(true);
         leftPanel.setOneTouchExpandable(true);
@@ -58,6 +60,11 @@ public class Window {
     }
     private void setToolBarPanel() {
         toolBarPanel = new ToolBarPanel();
+        toolBarPanelScrollPane = new JScrollPane(toolBarPanel);
+        toolBarPanelScrollPane.setAutoscrolls(true);
+        toolBarPanelScrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        toolBarPanelScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        toolBarPanelScrollPane.setSize(new Dimension(toolBarPanel.getWidth(),10000));
     }
     private void setMenuBar(){
         menuBar = new JMenuBar();
@@ -65,7 +72,12 @@ public class Window {
         JMenuItem saveAsPNG = new JMenuItem("Save as PNG");
         save.add(saveAsPNG);
         menuBar.add(save);
-        //TODO: implement save function
+        saveAsPNG.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                latex.download();
+            }
+        });
     }
 
     private void initLatexOutputPanel(){
