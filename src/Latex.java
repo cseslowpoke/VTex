@@ -82,30 +82,38 @@ public class Latex {
             //System.out.printf("bottomright dist :%d\n",distSquare(x,y,bottomrightx,bottomrighty));
             //System.out.printf("center dist :%d\n",distSquare(x,y,centerx,centery));
 
-            gr.drawOval(centerx-(int)(Math.sqrt(range)),centery-(int)(Math.sqrt(range)),(int)(Math.sqrt(range))*2,(int)(Math.sqrt(range))*2);
-            //gr.drawOval(toprightx-(int)(Math.sqrt(range)),toprighty-(int)(Math.sqrt(range)),(int)(Math.sqrt(range))*2,(int)(Math.sqrt(range))*2);
-            //gr.drawOval(bottomrightx-(int)(Math.sqrt(range)),bottomrighty-(int)(Math.sqrt(range)),(int)(Math.sqrt(range))*2,(int)(Math.sqrt(range))*2);
-            //gr.drawOval(rightx-(int)(Math.sqrt(range)),righty-(int)(Math.sqrt(range)),(int)(Math.sqrt(range))*2,(int)(Math.sqrt(range))*2);
+            if(dfsList.get(i).hasPos(AtomPos.RIGHT)){
+                gr.drawOval(rightx-(int)(Math.sqrt(range)),righty-(int)(Math.sqrt(range)),(int)(Math.sqrt(range))*2,(int)(Math.sqrt(range))*2);
+                if(distSquare(x,y,rightx,righty)<range) {
+                    pos = AtomPos.RIGHT;
+                    select = i;
+                }
+            }
+            if(dfsList.get(i).hasPos(AtomPos.CENTER)){
+                gr.drawOval(centerx-(int)(Math.sqrt(range)),centery-(int)(Math.sqrt(range)),(int)(Math.sqrt(range))*2,(int)(Math.sqrt(range))*2);
+                if(distSquare(x,y,centerx,centery)<range) {
+                    pos = AtomPos.CENTER;
+                    select = i;
+                }
+            }
 
-            if(dfsList.get(i).hasPos(AtomPos.TOP_RIGHT) && distSquare(x,y,toprightx,toprighty)<range){
-                pos = AtomPos.TOP_RIGHT;
-                select = i;
+            if(dfsList.get(i).hasPos(AtomPos.BOTTOM_RIGHT)){
+                gr.drawOval(bottomrightx-(int)(Math.sqrt(range)),bottomrighty-(int)(Math.sqrt(range)),(int)(Math.sqrt(range))*2,(int)(Math.sqrt(range))*2);
+                if(distSquare(x,y,bottomrightx,bottomrighty)<range) {
+                    pos = AtomPos.BOTTOM_RIGHT;
+                    select = i;
+                }
             }
-            else if(dfsList.get(i).hasPos(AtomPos.BOTTOM_RIGHT)&& distSquare(x,y,bottomrightx,bottomrighty)<range){
-                pos = AtomPos.BOTTOM_RIGHT;
-                select = i;
+            if(dfsList.get(i).hasPos(AtomPos.TOP_RIGHT)){
+                gr.drawOval(toprightx-(int)(Math.sqrt(range)),toprighty-(int)(Math.sqrt(range)),(int)(Math.sqrt(range))*2,(int)(Math.sqrt(range))*2);
+                if(distSquare(x,y,toprightx,toprighty)<range) {
+                    pos = AtomPos.TOP_RIGHT;
+                    select = i;
+                }
             }
-            else if(dfsList.get(i).hasPos(AtomPos.CENTER)&&distSquare(x,y,centerx,centery)<range){
-                pos = AtomPos.CENTER;
-                select = i;
-            }
-            else if(dfsList.get(i).hasPos(AtomPos.RIGHT)&&distSquare(x,y,rightx,righty)<range){
-                pos = AtomPos.RIGHT;
-                select = i;
-            }
+
         }
         if(select!=-1){
-            System.out.println(dfsList.get(select));
             switch (pos){
                 case TOP_RIGHT : {
                     dfsList.get(select).setSuperscript(a);
@@ -120,7 +128,8 @@ public class Latex {
                         Atom p = dfsList.get(select).getParent();
                         if (p != null) {
                             p.replace(dfsList.get(select), a);
-                        } else {
+                        }
+                        else {
                             Atom cur = dfsList.get(select);
                             a.setSuperscript(cur.getSuperscript());
                             a.setSubscript(cur.getSubscript());

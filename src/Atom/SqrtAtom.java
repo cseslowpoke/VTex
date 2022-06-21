@@ -4,7 +4,12 @@ public class SqrtAtom extends Atom {
     Atom nth;
     Atom inside;
     Atom superscript;
-    public SqrtAtom(){}
+    public SqrtAtom(){
+        nth = new SpaceAtom();
+        inside = new SpaceAtom();
+        nth.setParent(this);
+        inside.setParent(this);
+    }
 
     public SqrtAtom(String s){
         inside = new SymbolAtom(s);
@@ -46,7 +51,9 @@ public class SqrtAtom extends Atom {
             nth.dfs(l);
         }
         l.add(this);
-        inside.dfs(l);
+        if(inside!=null) {
+            inside.dfs(l);
+        }
     }
 
     @Override

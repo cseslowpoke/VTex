@@ -12,7 +12,14 @@ public class SpaceAtom extends Atom {
 
     @Override
     public boolean hasPos(Latex.AtomPos pos) {
-        return false;
+        switch(pos){
+            case CENTER :{
+                return true;
+            }
+            default:{
+                return false;
+            }
+        }
     }
 
     @Override

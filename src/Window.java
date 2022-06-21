@@ -77,8 +77,9 @@ public class Window {
         latexOutputText.setColumns(20);
         latexCopyButton = new JButton("Copy");
 
-        FracAtom frac = new FracAtom("x","y");
-        frac.setDenominator(new SqrtAtom("a"));
+        SqrtAtom frac = new SqrtAtom();
+        //frac.setInside(new SymbolAtom("x"));
+        //frac.setDenominator(new SqrtAtom("a"));
         latex.root = frac;
         latexCopyButton.addActionListener(new ActionListener() {
             @Override
