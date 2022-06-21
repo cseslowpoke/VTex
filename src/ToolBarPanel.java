@@ -11,25 +11,26 @@ public class ToolBarPanel extends JPanel {
     ArrayList<String> iconDB=new ArrayList<String>(); //latex要有甚麼數學符號仍需要討論
     ArrayList<ToolButton> buttonDB = new ArrayList<ToolButton>();
 
-    JPanel numberPanel;
-    JPanel upperCasePanel;
-    JPanel lowerCasePanel;
-    JPanel upperGreekPanel;
-    JPanel lowerGreekPanel;
-    JPanel functionPanel;
-    JPanel delimiterPanel;
+
+    rowPanel numberPanel;
+    rowPanel upperCasePanel;
+    rowPanel lowerCasePanel;
+    rowPanel upperGreekPanel;
+    rowPanel lowerGreekPanel;
+    rowPanel functionPanel;
+    rowPanel delimiterPanel;
 
     ToolBarPanel(){
         super();
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
-        numberPanel = new JPanel();
-        upperCasePanel = new JPanel();
-        lowerCasePanel = new JPanel();
-        upperGreekPanel = new JPanel();
-        lowerGreekPanel = new JPanel();
-        functionPanel = new JPanel();
-        delimiterPanel = new JPanel();
+        numberPanel = new rowPanel();
+        upperCasePanel = new rowPanel();
+        lowerCasePanel = new rowPanel();
+        upperGreekPanel = new rowPanel();
+        lowerGreekPanel = new rowPanel();
+        functionPanel = new rowPanel();
+        delimiterPanel = new rowPanel();
 
         numberPanel.setLayout(new WrapLayout());
         upperCasePanel.setLayout(new WrapLayout());
@@ -200,10 +201,14 @@ public class ToolBarPanel extends JPanel {
             delimiterPanel.add(button);
             iconCount++;
         }
+        Graphics g = getGraphics();
+
 
         setBackground(Color.white);
+
         setSize(500,500);
     }
+
 
 
     public void clearSelected() {
@@ -213,5 +218,19 @@ public class ToolBarPanel extends JPanel {
     int width = 0;
     public void setWidth(int w){
         width = w;
+    }
+
+    @Override
+    public void paintComponent(Graphics g) {
+        g.setColor(Color.white);
+        g.fillRect(0,0,this.getWidth(),this.getHeight());
+    }
+
+    private class rowPanel extends JPanel{
+        @Override
+        public void paintComponent(Graphics g) {
+            g.setColor(Color.white);
+            g.fillRect(0,0,this.getWidth(),this.getHeight());
+        }
     }
 }

@@ -72,7 +72,6 @@ public class SymbolAtom extends Atom {
         switch(dfsorder){
             case TOP:{
                 l.add(this);
-                System.out.println(symbol);
                 if(superscriptAtom!=null){
                     superscriptAtom.dfs(l);
                 }
@@ -85,7 +84,6 @@ public class SymbolAtom extends Atom {
                 if(superscriptAtom!=null){
                     superscriptAtom.dfs(l);
                 }
-                System.out.println(symbol);
                 if(symbol=="\\lim "){
                     l.add(this);l.add(this);
                 }

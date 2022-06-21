@@ -30,7 +30,6 @@ public class Latex {
         ArrayList<Atom> l = new ArrayList<>();
         if(root !=null) {
             root.dfs(l);
-            System.out.print("\n\n\n\n");
         }
         return l;
     }

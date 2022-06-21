@@ -1,4 +1,3 @@
-
 import org.scilab.forge.jlatexmath.*;
 
 import javax.swing.*;
@@ -10,15 +9,23 @@ public class ToolButton extends JLabel {
     public String iconSrc;
     Type TYPE;
     String value;
-
-
+    BufferedImage image;
 
     public ToolButton(Type TYPE, String value) {
         this.TYPE = TYPE;
         this.value = value;
-        if(TYPE == Type.SYMBOL) setPreferredSize(new Dimension(60 ,60));
-        if(TYPE == Type.FRAC) setPreferredSize(new Dimension(100 ,100));
-        if(TYPE == Type.SQRT) setPreferredSize(new Dimension(100 ,100));
+        TeXFormula formula = new TeXFormula(value);
+        TeXIcon icon = formula.createTeXIcon(TeXConstants.STYLE_DISPLAY, 50);
+        image = new BufferedImage(icon.getIconWidth(),icon.getIconHeight(), BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g2 = image.createGraphics();
+        g2.fillRect(0, 0, icon.getIconWidth(), icon.getIconHeight());
+        g2.setColor(Color.white);
+        g2.fillRect(0, 0, icon.getIconWidth(), icon.getIconHeight());
+        JLabel jl = new JLabel();
+        jl.setForeground(new Color(0, 0, 0));
+        //System.out.println(icon.getIconHeight());
+        icon.paintIcon(jl, g2, 0, 0);
+        setPreferredSize(new Dimension(icon.getIconWidth() ,icon.getIconHeight()));
     }
     public Atom createAtom() {
         if(TYPE == Type.SYMBOL) {
@@ -35,19 +42,7 @@ public class ToolButton extends JLabel {
 
     @Override
     public void paintComponent(Graphics g) {
-        TeXFormula formula = new TeXFormula(value);
-        TeXIcon icon = formula.createTeXIcon(TeXConstants.STYLE_DISPLAY, 50);
-        BufferedImage image = new BufferedImage(icon.getIconWidth(),icon.getIconHeight(), BufferedImage.TYPE_INT_ARGB);
-        Graphics2D g2 = image.createGraphics();
-        g2.fillRect(0, 0, icon.getIconWidth(), icon.getIconHeight());
-        g2.setColor(Color.white);
-        g2.fillRect(0, 0, icon.getIconWidth(), icon.getIconHeight());
-        JLabel jl = new JLabel();
-        jl.setForeground(new Color(0, 0, 0));
-        //System.out.println(icon.getIconHeight());
-        icon.paintIcon(jl, g2, 0, 0);
         g.drawImage(image,0,0,null);
-        setPreferredSize(new Dimension(icon.getIconWidth() ,icon.getIconHeight()));
     }
 
     public void selected() {
@@ -57,21 +52,4 @@ public class ToolButton extends JLabel {
     public void unSelected() {
         setBorder(null);
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,33 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Vtex:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="781dae10-3875-42e8-bb3e-5e9490018ab4" name="Changes" comment="can run with bug">
-      <change afterPath="$PROJECT_DIR$/src/WrapLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Latex$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Latex$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Latex$AtomPos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Latex$AtomPos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Latex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Latex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/SymbolAtom$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/SymbolAtom$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/SymbolAtom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/SymbolAtom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/SymbolOptionPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/SymbolOptionPanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/SymbolOptionPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/SymbolOptionPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Vtex/ToolButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/ToolButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Window$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Window$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Window$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Window$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Window$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Window$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Window$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Window$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Vtex/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Window.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Atom/SymbolAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/SymbolAtom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Latex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Latex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SymbolOptionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SymbolOptionPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ToolBarPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToolBarPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ToolButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToolButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
@@ -72,6 +57,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -160,7 +148,10 @@
       <workItem from="1655820926380" duration="12256000" />
       <workItem from="1655833423497" duration="308000" />
       <workItem from="1655833818618" duration="103000" />
-      <workItem from="1655834018022" duration="881000" />
+      <workItem from="1655834018022" duration="1688000" />
+      <workItem from="1655835738264" duration="301000" />
+      <workItem from="1655836755613" duration="680000" />
+      <workItem from="1655837682472" duration="82000" />
     </task>
     <task id="LOCAL-00001" summary="FF">
       <created>1648624025684</created>
