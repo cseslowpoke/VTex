@@ -69,13 +69,18 @@ public class SymbolAtom extends Atom {
     }
 
     @Override
-    public boolean hasSuperscript() {
-        return true;
-    }
-
-    @Override
-    public boolean hasSubscript() {
-        return true;
+    public boolean hasPos(Latex.AtomPos pos) {
+        switch(pos){
+            case TOP_RIGHT :
+            case BOTTOM_RIGHT:
+            case RIGHT:
+            case CENTER:{
+                return true;
+            }
+            default:{
+                return false;
+            }
+        }
     }
 
     @Override

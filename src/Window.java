@@ -152,6 +152,9 @@ public class Window {
     }
 
     public void repaintShowpanel(){
+        Graphics g = showPanel.getGraphics();
+        g.setColor(Color.white);
+        g.fillRect(0,0,showPanel.getWidth(),showPanel.getHeight());
         latexOutputText.setText(latex.draw(showPanel.getGraphics()));
     }
 

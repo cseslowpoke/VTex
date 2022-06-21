@@ -50,13 +50,15 @@ public class SqrtAtom extends Atom {
     }
 
     @Override
-    public boolean hasSuperscript() {
-        return true;
-    }
-
-    @Override
-    public boolean hasSubscript() {
-        return false;
+    public boolean hasPos(Latex.AtomPos pos) {
+        switch(pos){
+            case TOP_RIGHT :{
+                return true;
+            }
+            default:{
+                return false;
+            }
+        }
     }
 
     @Override

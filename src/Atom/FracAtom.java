@@ -29,18 +29,21 @@ public class FracAtom extends Atom {
     }
     @Override
     public void dfs(ArrayList<Atom> l){
+        l.add(this);
         numerator.dfs(l);
         denominator.dfs(l);
     }
 
     @Override
-    public boolean hasSuperscript() {
-        return false;
-    }
-
-    @Override
-    public boolean hasSubscript() {
-        return false;
+    public boolean hasPos(Latex.AtomPos pos) {
+        switch(pos){
+            case RIGHT :{
+                return true;
+            }
+            default:{
+                return false;
+            }
+        }
     }
 
     @Override

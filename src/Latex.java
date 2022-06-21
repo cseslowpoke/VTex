@@ -23,8 +23,9 @@ public class Latex {
         root.dfs(l);
         return l;
     }
-
+    Graphics gr;
     public String draw(Graphics g){
+        gr=g;
         Box.Inset = new LinkedList<>();
         String latexFormula = generateFormula();
         TeXFormula formula = new TeXFormula(latexFormula);
@@ -49,7 +50,7 @@ public class Latex {
         return latexFormula;
     }
 
-    enum AtomPos{TOP_RIGHT, RIGHT, BOTTOM_RIGHT,CENTER,NONE};
+    public enum AtomPos{TOP_RIGHT, RIGHT, BOTTOM_RIGHT,CENTER,NONE};
 
     int distSquare(int x1,int y1,int x2,int y2){
         int t1 = x2-x1;
@@ -62,7 +63,6 @@ public class Latex {
         AtomPos pos = AtomPos.NONE;
         System.out.printf("%d\n",dfsList.size());
         for(int i=0;i<Box.Inset.size()&&i<dfsList.size();i++){
-            if(dfsList.get(i) instanceof SqrtAtom)continue;
             Rectangle2D.Float rect = Box.Inset.get(i);
             if(rect.height==0) {
                 rect.y-=0.5;
@@ -82,24 +82,24 @@ public class Latex {
             //System.out.printf("bottomright dist :%d\n",distSquare(x,y,bottomrightx,bottomrighty));
             //System.out.printf("center dist :%d\n",distSquare(x,y,centerx,centery));
 
-            //gr.drawOval(centerx-(int)(Math.sqrt(range)),centery-(int)(Math.sqrt(range)),(int)(Math.sqrt(range))*2,(int)(Math.sqrt(range))*2);
+            gr.drawOval(centerx-(int)(Math.sqrt(range)),centery-(int)(Math.sqrt(range)),(int)(Math.sqrt(range))*2,(int)(Math.sqrt(range))*2);
             //gr.drawOval(toprightx-(int)(Math.sqrt(range)),toprighty-(int)(Math.sqrt(range)),(int)(Math.sqrt(range))*2,(int)(Math.sqrt(range))*2);
             //gr.drawOval(bottomrightx-(int)(Math.sqrt(range)),bottomrighty-(int)(Math.sqrt(range)),(int)(Math.sqrt(range))*2,(int)(Math.sqrt(range))*2);
             //gr.drawOval(rightx-(int)(Math.sqrt(range)),righty-(int)(Math.sqrt(range)),(int)(Math.sqrt(range))*2,(int)(Math.sqrt(range))*2);
 
-            if(dfsList.get(i).hasSuperscript() && distSquare(x,y,toprightx,toprighty)<range){
+            if(dfsList.get(i).hasPos(AtomPos.TOP_RIGHT) && distSquare(x,y,toprightx,toprighty)<range){
                 pos = AtomPos.TOP_RIGHT;
                 select = i;
             }
-            else if(dfsList.get(i).hasSubscript()&& distSquare(x,y,bottomrightx,bottomrighty)<range){
+            else if(dfsList.get(i).hasPos(AtomPos.BOTTOM_RIGHT)&& distSquare(x,y,bottomrightx,bottomrighty)<range){
                 pos = AtomPos.BOTTOM_RIGHT;
                 select = i;
             }
-            else if(distSquare(x,y,centerx,centery)<range){
+            else if(dfsList.get(i).hasPos(AtomPos.CENTER)&&distSquare(x,y,centerx,centery)<range){
                 pos = AtomPos.CENTER;
                 select = i;
             }
-            else if(distSquare(x,y,rightx,righty)<range){
+            else if(dfsList.get(i).hasPos(AtomPos.RIGHT)&&distSquare(x,y,rightx,righty)<range){
                 pos = AtomPos.RIGHT;
                 select = i;
             }

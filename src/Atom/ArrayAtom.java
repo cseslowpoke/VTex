@@ -9,7 +9,6 @@ public class ArrayAtom extends Atom {
 
     @Override
     public String generate() {
-
         return null;
     }
 
@@ -17,14 +16,10 @@ public class ArrayAtom extends Atom {
     public void dfs(ArrayList<Atom> l){}
 
     @Override
-    public boolean hasSuperscript() {
+    public boolean hasPos(Latex.AtomPos pos) {
         return false;
     }
 
-    @Override
-    public boolean hasSubscript() {
-        return false;
-    }
 
     @Override
     public void setSuperscript(Atom a) {

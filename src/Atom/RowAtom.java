@@ -30,12 +30,7 @@ public class RowAtom extends Atom {
     }
 
     @Override
-    public boolean hasSuperscript() {
-        return false;
-    }
-
-    @Override
-    public boolean hasSubscript() {
+    public boolean hasPos(Latex.AtomPos pos) {
         return false;
     }
 

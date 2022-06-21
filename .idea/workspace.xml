@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="781dae10-3875-42e8-bb3e-5e9490018ab4" name="Changes" comment="can run with bug">
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Latex$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Latex$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Latex$AtomPos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Latex$AtomPos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Latex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Latex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SymbolOptionPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SymbolOptionPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToolBarPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToolBarPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jlatexmath-1.0.8-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/jlatexmath-1.0.8-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vtex/FracAtom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/FracAtom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vtex/SymbolOptionPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/SymbolOptionPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Atom/ArrayAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/ArrayAtom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Atom/Atom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/Atom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Atom/FracAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/FracAtom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Atom/RowAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/RowAtom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Atom/SpaceAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/SpaceAtom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Atom/SqrtAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/SqrtAtom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Atom/SymbolAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/SymbolAtom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Latex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Latex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,6 +138,7 @@
       <workItem from="1655812769993" duration="1500000" />
       <workItem from="1655815095779" duration="1770000" />
       <workItem from="1655817693346" duration="692000" />
+      <workItem from="1655820926380" duration="1734000" />
     </task>
     <task id="LOCAL-00001" summary="FF">
       <created>1648624025684</created>
@@ -237,7 +245,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Window_java$ScreenTest.ic" NAME="ScreenTest Coverage Results" MODIFIED="1654691579597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Window_java$Window.ic" NAME="Window Coverage Results" MODIFIED="1654691766966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Window_java$ScreenTest.ic" NAME="ScreenTest Coverage Results" MODIFIED="1654691579597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
