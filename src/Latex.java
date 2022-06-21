@@ -13,14 +13,21 @@ import java.util.LinkedList;
 public class Latex {
     public Atom root;
     final int fontSize = 100;
-    ArrayList<Atom> dfsList;
+    ArrayList<Atom> dfsList = new ArrayList<>();
     public String generateFormula(){
-        return root.generate();
+        if(root!=null) {
+            return root.generate();
+        }
+        else{
+            return "";
+        }
     }
 
     ArrayList<Atom> getDfsList(){
         ArrayList<Atom> l = new ArrayList<>();
-        root.dfs(l);
+        if(root !=null) {
+            root.dfs(l);
+        }
         return l;
     }
     Graphics gr;
@@ -59,9 +66,12 @@ public class Latex {
     }
 
     boolean addAtom(Atom a,int x,int y){
+        if(root == null){
+            root = a;
+            return true;
+        }
         int select = -1;
         AtomPos pos = AtomPos.NONE;
-        System.out.printf("%d\n",dfsList.size());
         for(int i=0;i<Box.Inset.size()&&i<dfsList.size();i++){
             Rectangle2D.Float rect = Box.Inset.get(i);
             if(rect.height==0) {

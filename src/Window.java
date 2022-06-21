@@ -2,10 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
@@ -73,29 +70,16 @@ public class Window {
 
     private void initLatexOutputPanel(){
         latexOutput = new JPanel(new BorderLayout());
-        latexOutputText = new JTextField("Latex output here:test test test test test test test test test test test test test test");
+        latexOutputText = new JTextField("");
         latexOutputText.setColumns(20);
         latexCopyButton = new JButton("Copy");
-
-        SqrtAtom frac = new SqrtAtom();
-        //frac.setInside(new SymbolAtom("x"));
-        //frac.setDenominator(new SqrtAtom("a"));
-        latex.root = frac;
+        latex.root = null;
         latexCopyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 StringSelection stringSelection = new StringSelection(latexOutputText.getText());
                 Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
                 clipboard.setContents(stringSelection, null);
-                //tem
-
-
-                //FracAtom topF = new FracAtom("12","34");
-                //FracAtom botF = new FracAtom("56","78");
-
-                //frac.setNumerator(topF);
-                //frac.setDenominator(botF);
-
                 repaintShowpanel();
             }
         });
@@ -110,7 +94,8 @@ public class Window {
         latexClearButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                latex.root = new SymbolAtom("a");
+                latex.root = null;
+                repaintShowpanel();
             }
         });
         latexOutput.add(latexClearButton, BorderLayout.WEST);
@@ -119,7 +104,7 @@ public class Window {
     private void initShowPanel() {
         showPanel = new JPanel();
         showPanel.setLayout(new BoxLayout(showPanel, BoxLayout.Y_AXIS));
-        showPanel.add(new JLabel("showPanel"));
+        showPanel.add(new JLabel());
         showPanel.setBackground(Color.white);
         latex = new Latex();
         showPanel.addMouseListener(new MouseAdapter() {
@@ -134,8 +119,12 @@ public class Window {
                     builder.nowAtom = null;
                     repaintShowpanel();
                 }
-
-
+            }
+        });
+        showPanel.addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                repaintShowpanel();
             }
         });
     }

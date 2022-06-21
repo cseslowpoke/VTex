@@ -124,5 +124,18 @@ public class SymbolAtom extends Atom {
     }
 
     @Override
-    public void replace(Atom a, Atom b) {}
+    public void replace(Atom a, Atom b) {
+        if(superscriptAtom.equals(a)){
+            b.setSuperscript(superscriptAtom.getSuperscript());
+            b.setSubscript(superscriptAtom.getSubscript());
+            superscriptAtom = b;
+            superscriptAtom.setParent(this);
+        }
+        else if(subscriptAtom.equals(a)){
+            b.setSuperscript(subscriptAtom.getSuperscript());
+            b.setSubscript(subscriptAtom.getSubscript());
+            subscriptAtom = b;
+            subscriptAtom.setParent(this);
+        }
+    }
 }
