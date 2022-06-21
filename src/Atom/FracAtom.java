@@ -14,8 +14,8 @@ public class FracAtom extends Atom {
         denominator.setParent(this);
     };
     public FracAtom(String x,String y){
-        numerator = new RowAtom(x);
-        denominator = new RowAtom(y);
+        numerator = new SymbolAtom(x);
+        denominator = new SymbolAtom(y);
         numerator.setParent(this);
         denominator.setParent(this);
     }

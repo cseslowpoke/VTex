@@ -6,12 +6,7 @@ public class RowAtom extends Atom {
         row = new ArrayList<Atom>();
     }
     public RowAtom(String x){
-        row = new ArrayList<>();
-        for(int i = 0;i<x.length();i++){
-            Atom tem = new SymbolAtom(x.charAt(i));
-            row.add(tem);
-            tem.setParent(this);
-        }
+
     }
     public RowAtom(Atom a){
         row = new ArrayList<Atom>();

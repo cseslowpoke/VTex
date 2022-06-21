@@ -3,11 +3,11 @@ import java.util.ArrayList;
 public class SymbolAtom extends Atom {
     private boolean boldFace;
     private boolean italicFace;
-    private char symbol;
+    private String symbol;
     private Atom superscriptAtom;
     private Atom subscriptAtom;
     private Atom parent;
-    public SymbolAtom(char symbol) {
+    public SymbolAtom(String symbol) {
         this.symbol = symbol;
         this.boldFace = false;
         this.italicFace = false;
@@ -21,7 +21,7 @@ public class SymbolAtom extends Atom {
         this.italicFace = italicFace;
     }
 
-    public char getSymbol() {
+    public String getSymbol() {
         return symbol;
     }
 

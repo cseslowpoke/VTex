@@ -70,7 +70,7 @@ public class Latex {
                 }
             }
         }
-        addAtom(new SymbolAtom('A'),x,y);
+        addAtom(new SymbolAtom("A"),x,y);
     }
     enum AtomPos{TOP_RIGHT, RIGHT, BOTTOM_RIGHT,CENTER,NONE};
 
