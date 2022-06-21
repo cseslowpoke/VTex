@@ -2,17 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="781dae10-3875-42e8-bb3e-5e9490018ab4" name="Changes" comment="basic class with test">
-      <change afterPath="$PROJECT_DIR$/src/Builder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SymbolOptionPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Type.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/ModifyPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/ModifyPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/ToolBarPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/ToolButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/ToolButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/jlatexmath-1.0.8-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/jlatexmath-1.0.8-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vtex/ArrayAtom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/ArrayAtom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Atom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Atom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vtex/FracAtom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/FracAtom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Latex$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Latex$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Latex$AtomPos.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Latex$AtomPos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Latex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Latex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vtex/RowAtom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/RowAtom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vtex/SpaceAtom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/SpaceAtom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vtex/SqrtAtom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/SqrtAtom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vtex/SymbolAtom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/SymbolAtom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Window$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Window$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Window$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Window$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Vtex/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Window.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ModifyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ModifyPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToolBarPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToolBarPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToolButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToolButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Atom/ArrayAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/ArrayAtom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Atom/Atom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/Atom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Atom/FracAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/FracAtom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Atom/RowAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/RowAtom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Atom/SpaceAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/SpaceAtom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Atom/SqrtAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/SqrtAtom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Atom/SymbolAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/SymbolAtom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Latex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Latex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +37,6 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -35,7 +46,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="test" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,7 +55,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="275xE2R4qiov9NaZYyYhUOOHEJs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -54,18 +65,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Unnamed">
+  <component name="RunManager" selected="Application.Window">
     <configuration name="ScreenTest" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ScreenTest" />
       <module name="Vtex" />
@@ -97,6 +108,11 @@
       <item itemvalue="Application.Window" />
       <item itemvalue="JAR Application.jlatexmath-1.0.7.jar" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Window" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -120,8 +136,15 @@
       <workItem from="1653111084218" duration="5082000" />
       <workItem from="1654691264531" duration="763000" />
       <workItem from="1654692050239" duration="2546000" />
-      <workItem from="1654702304615" duration="785000" />
-      <workItem from="1655652430545" duration="11032000" />
+      <workItem from="1655640602348" duration="8654000" />
+      <workItem from="1655652624361" duration="166000" />
+      <workItem from="1655653206527" duration="1939000" />
+      <workItem from="1655655983519" duration="74000" />
+      <workItem from="1655657079762" duration="6192000" />
+      <workItem from="1655663481631" duration="49000" />
+      <workItem from="1655663549528" duration="61000" />
+      <workItem from="1655663714157" duration="540000" />
+      <workItem from="1655801771813" duration="7037000" />
     </task>
     <task id="LOCAL-00001" summary="FF">
       <created>1648624025684</created>
@@ -165,42 +188,7 @@
       <option name="project" value="LOCAL" />
       <updated>1649408803490</updated>
     </task>
-    <task id="LOCAL-00007" summary="basic class with test">
-      <created>1654702503920</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1654702503920</updated>
-    </task>
-    <task id="LOCAL-00008" summary="button finish !!&#10;button event test semi-finish QQ">
-      <created>1655603312466</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1655603312466</updated>
-    </task>
-    <task id="LOCAL-00009" summary="button finish !!&#10;button event test semi-finish QQ">
-      <created>1655605775731</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1655605775731</updated>
-    </task>
-    <task id="LOCAL-00010" summary="button finish !!&#10;button event test semi-finish QQ">
-      <created>1655605793239</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1655605793239</updated>
-    </task>
-    <task id="LOCAL-00011" summary="4 panel constructor bacic finish!!">
-      <created>1655633845160</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1655633845160</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +205,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Sean" />
+                        <option value="slowpoke" />
                       </list>
                     </value>
                   </entry>
@@ -234,12 +222,10 @@
     <MESSAGE value="check" />
     <MESSAGE value="basic class" />
     <MESSAGE value="basic class with test" />
-    <MESSAGE value="button finish !!&#10;button event test semi-finish QQ" />
-    <MESSAGE value="4 panel constructor bacic finish!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="4 panel constructor bacic finish!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic class with test" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Window_java$ScreenTest.ic" NAME="ScreenTest Coverage Results" MODIFIED="1654691579597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Window_java$Window.ic" NAME="Window Coverage Results" MODIFIED="1654691766966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Window_java$ScreenTest.ic" NAME="ScreenTest Coverage Results" MODIFIED="1654691579597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

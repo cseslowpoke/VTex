@@ -1,11 +1,13 @@
+import java.util.ArrayList;
+
 public class SymbolAtom extends Atom {
     private boolean boldFace;
     private boolean italicFace;
-    private String symbol;
+    private char symbol;
     private Atom superscriptAtom;
     private Atom subscriptAtom;
-
-    public SymbolAtom(String symbol) {
+    private Atom parent;
+    public SymbolAtom(char symbol) {
         this.symbol = symbol;
         this.boldFace = false;
         this.italicFace = false;
@@ -19,15 +21,7 @@ public class SymbolAtom extends Atom {
         this.italicFace = italicFace;
     }
 
-    public void setSuperscriptAtom(Atom superscriptAtom) {
-        this.superscriptAtom = superscriptAtom;
-    }
-
-    public void setSubscriptAtom(Atom subscriptAtom) {
-        this.subscriptAtom = subscriptAtom;
-    }
-
-    public String getSymbol() {
+    public char getSymbol() {
         return symbol;
     }
 
@@ -38,17 +32,6 @@ public class SymbolAtom extends Atom {
     public boolean isItalicFace() {
         return italicFace;
     }
-
-    public Atom getSuperscriptAtom() {
-        return superscriptAtom;
-    }
-
-    public Atom getSubscriptAtom() {
-        return subscriptAtom;
-    }
-
-
-
 
     @Override
     public String generate() {
@@ -74,4 +57,67 @@ public class SymbolAtom extends Atom {
         }
         return ret + "}";
     }
+    @Override
+    public void dfs(ArrayList<Atom> l){
+        l.add(this);
+        if(superscriptAtom!=null){
+            superscriptAtom.dfs(l);
+        }
+        if(subscriptAtom!=null){
+            subscriptAtom.dfs((l));
+        }
+    }
+
+    @Override
+    public boolean hasSuperscript() {
+        return true;
+    }
+
+    @Override
+    public boolean hasSubscript() {
+        return true;
+    }
+
+    @Override
+    public void setSuperscript(Atom a) {
+        if(a!=null) {
+            superscriptAtom = a;
+            superscriptAtom.setParent(this);
+        }
+    }
+
+    @Override
+    public void setSubscript(Atom a) {
+        if(a!=null) {
+            subscriptAtom = a;
+            subscriptAtom.setParent(this);
+        }
+    }
+
+    @Override
+    public Atom getSuperscript() {
+        return  superscriptAtom;
+    }
+
+    @Override
+    public Atom getSubscript() {
+        return subscriptAtom;
+    }
+
+    @Override
+    public Atom getParent() {
+        return parent;
+    }
+
+    public void setParent(Atom a){
+        parent = a;
+    }
+
+    @Override
+    public boolean isTerminal() {
+        return true;
+    }
+
+    @Override
+    public void replace(Atom a, Atom b) {}
 }
