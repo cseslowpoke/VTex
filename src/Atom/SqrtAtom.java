@@ -7,7 +7,7 @@ public class SqrtAtom extends Atom {
     public SqrtAtom(){}
 
     public SqrtAtom(String s){
-        inside = new RowAtom(s);
+        inside = new SymbolAtom(s);
     }
 
     public void setNth(Atom a){

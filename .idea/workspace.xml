@@ -1,25 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="781dae10-3875-42e8-bb3e-5e9490018ab4" name="Changes" comment="basic class with test">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/scilab_forge_jlatexmath.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vtex.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Vtex.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/FracAtom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/FracAtom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Latex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Latex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/RowAtom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/RowAtom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/SqrtAtom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/SqrtAtom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/SymbolAtom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/SymbolAtom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/ToolButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/ToolButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Window$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Window$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Window$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Window$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Vtex/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Vtex/Window.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Atom/FracAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/FracAtom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Atom/RowAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/RowAtom.java" afterDir="false" />
+    <list default="true" id="781dae10-3875-42e8-bb3e-5e9490018ab4" name="Changes" comment="can run with bug">
       <change beforePath="$PROJECT_DIR$/src/Atom/SqrtAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/SqrtAtom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Atom/SymbolAtom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Atom/SymbolAtom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Latex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Latex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +130,7 @@
       <workItem from="1655801771813" duration="7037000" />
       <workItem from="1655810942438" duration="443000" />
       <workItem from="1655811403750" duration="1359000" />
-      <workItem from="1655812769993" duration="1404000" />
+      <workItem from="1655812769993" duration="1500000" />
     </task>
     <task id="LOCAL-00001" summary="FF">
       <created>1648624025684</created>
@@ -198,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655811113215</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="can run with bug">
+      <created>1655814265854</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1655814265855</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +222,8 @@
     <MESSAGE value="check" />
     <MESSAGE value="basic class" />
     <MESSAGE value="basic class with test" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic class with test" />
+    <MESSAGE value="can run with bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="can run with bug" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Window_java$ScreenTest.ic" NAME="ScreenTest Coverage Results" MODIFIED="1654691579597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
